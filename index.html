@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Estudo</title>
+   <!-- <title>Teste de Estudo</title>
     <style>
         p.linha1 {
             font-family: Arial, sans-serif; // define fonte Arial
@@ -15,13 +15,32 @@
         font-style: oblique;
        }
                      
+    </style> -->
+    <style>
+        body{
+            background-color:rgb(181, 129, 230);
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
     </style>
+    <title> Aprendizado em DOM</title>
 </head>
 
 <body>
-    <h1>Meu Primeiro Teste</h1>
-
-    <script src="code-javascript.js"></script>
+    <!-- <h1>Meu Primeiro Teste</h1>
+    <p class="linha1">Texto formatação linha 1</p>
+    <p class="linha2">Texto formatação linha 2</p> -->
+    <h1>Iniciando Aprendizado</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <!-- <script src="code-javascript.js"></script>-->
+     <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        <!-- window.document.write(window.document.URL) -->
+        window.document.write('esse é o p1:' + p1.innerText)
+        p1.style.color = 'blue'
+     </script>
 </body>
 
 </html>
