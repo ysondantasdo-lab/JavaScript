@@ -16,8 +16,10 @@
 //documento.write('<br>')
 //window.alert(`tudo em maiúsculo' ${texto.toUpperCase()}`)
 //document.write(`<h2>minúsculo: ${texto.toLowerCase()}</h2>`)
-var n1 = Number(10104.5)
+//var n1 = Number(10104.5)
 //n1 = n1.toFixed(2).replace('.',',')
-n1 = n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+//n1 = n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
 //no lugar de BRL pode ser usado USD ou EUR
-window.alert(n1)
+//window.alert(n1)
+console.log("O código está funcionando!");
+
