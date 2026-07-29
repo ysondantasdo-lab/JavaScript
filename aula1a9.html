@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <title>Teste de Estudo</title>
+    <style>
+        p.linha1 {
+            font-family: Arial, sans-serif; // define fonte Arial
+            font-style: italic;
+            font-size: 40pt;
+       }
+       p.linha2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30pt;
+        font-style: oblique;
+       }
+                     
+    </style> -->
+    <style>
+        body{
+            background-color:rgb(181, 129, 230);
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
+    </style>
+    <title> Aprendizado em DOM</title>
+</head>
+
+<body>
+    <!-- <h1>Meu Primeiro Teste</h1>
+    <p class="linha1">Texto formatação linha 1</p>
+    <p class="linha2">Texto formatação linha 2</p> -->
+    <h1>Iniciando Aprendizado</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    //<div id="msg">Clique em mim</div>
+    // selecionar elemento por nome
+    <div name="mensagem"> Selecionar por nome</div>
+    <!-- <script src="code-javascript.js"></script>-->
+     <script>
+        // selecionar elemento por nome  nome é parágrafo
+        // [começa em 0] então [1] é o segunto parágrafo
+        //var p1 = window.document.getElementsByTagName('p')[1]
+        // escreve na janela o p1
+        //window.document.write(p1.innerText)
+        // criar uma variável para elemento body
+        //var corpo = window.document.body
+        //corpo.style.background = 'black'
+        <!-- window.document.write(window.document.URL) -->
+        window.document.write('esse é o p1:' + p1.innerText)
+        p1.style.color = 'blue'
+        // seleciona a div por id
+        var d = window.document.getElementById("msg")
+        // seleciona a div por name
+        var d =  window.document.getElementsByTagName("mensagem")[0]
+        d.style.background='green'
+        // muda o texto da div de Clique em mim
+        d.innerText = "Texto da div alterado"
+        // inner.HTML pega toda a formantação
+        d.innerHTML=p1.innerHTML
+     </script>
+</body>
+
+</html>
