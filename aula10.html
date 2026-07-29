@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+    <style>
+        body{
+            font:normal 20pt Arial;
+        }
+        input{
+            font: normal 17pt Arial;
+            width: 100px;
+            height: 40px;
+            box-sizing:border-box;
+            vertical-align: middle;
+        }
+        p {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        #res {
+            font: italic 14pt Arial;
+            margin-top: 10px;
+        }
+        #area {
+            background:rgb(181, 45, 223);
+            color: rgb(88, 202, 202);
+            font: bold 35px Arial;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        #btn_somar{
+            width: 90px;
+            font-size: 11pt;
+            font-weight: bold;
+            height: 40px;
+            box-sizing: border-box; /* Garante que a altura inclua bordas e margens internas */
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Somando números
+    </h1>
+    <p>
+    <input type="text" name="txt1" id="idtxt1"> +   
+    <input type="number" name="txt2" id="idtxt2" step="5">    
+    <input type="button" value="SOMAR" id="btn_somar" onclick="somar()">
+    </p>
+    <div id="res">Resultado</div>
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja...
+    </div> Essa div retirada para usar listener-->
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout', saiu)
+        function somar() {
+            var tn1 = window.document.getElementById('idtxt1')
+            var tn2 = window.document.querySelector('input#idtxt2')
+            var n1 = Number(tn1.value.replaceAll('.', '').replace(',', '.'))
+            var n2 = Number(tn2.value.replaceAll('.','').replace(',', '.'))
+            if(isNaN(n1)||isNaN(n2)){
+                res.innerText = "Digite apenas números"
+                return;
+            }
+            var s = n1 + n2
+            var sMoeda = s.toLocaleString('pt-BR',{
+                style:"currency",
+                currency: "BRL"
+            })
+            res.innerText = `A soma entre ${n1.toLocaleString('pt-BR')} e ${n2.toLocaleString('pt-BR')} é igual a ${sMoeda}`
+        }
+        function clicar() {
+          /*  var a = window.document.getElementById('area') */
+            a.innerText = 'Você Clicou'
+            a.style.background = 'red'
+        }
+        function entrar() {
+           // var e = window.document.getElementById('area')
+            a.innerText = 'Entrou'
+            a.style.background = 'black'
+        }
+        function saiu() {
+            //var sa = window.document.getElementById('area')
+            a.innerText = "Saiu"
+            a.style.background = 'green'
+        }
+    </script>
+
+</body>
+</html>
