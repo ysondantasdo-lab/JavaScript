@@ -1,46 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <title>Teste de Estudo</title>
-    <style>
-        p.linha1 {
-            font-family: Arial, sans-serif; // define fonte Arial
-            font-style: italic;
-            font-size: 40pt;
-       }
-       p.linha2 {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 30pt;
-        font-style: oblique;
-       }
-                     
-    </style> -->
-    <style>
-        body{
-            background-color:rgb(181, 129, 230);
-            color: aliceblue;
-            font: normal 18pt Arial;
-        }
-    </style>
-    <title> Aprendizado em DOM</title>
+    <title>Aula 10</title>
 </head>
-
 <body>
-    <!-- <h1>Meu Primeiro Teste</h1>
-    <p class="linha1">Texto formatação linha 1</p>
-    <p class="linha2">Texto formatação linha 2</p> -->
-    <h1>Iniciando Aprendizado</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
-    <!-- <script src="code-javascript.js"></script>-->
-     <script>
-        var p1 = window.document.getElementsByTagName('p')[0]
-        <!-- window.document.write(window.document.URL) -->
-        window.document.write('esse é o p1:' + p1.innerText)
-        p1.style.color = 'blue'
-     </script>
-</body>
+    <h1>
+        Somando números
+    </h1>
+    <input type="number" name="txt1" id="idtxt1"> +   
+    <input type="number" name="txt2" id="idtxt2">    
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('idtxt1')
+            var tn2 = window.document.querySelector('input#idtxt2')
+            var n1 = Number.parseInt('tn1.value')
+            var n2 = Number('tn2.value')
+            var s = n1 + n2
+            res.innerText = 'A soma entre ${n1} e ${n2} é igual a ${s}'
+        }
+    </script>
 
+</body>
 </html>
