@@ -12,8 +12,9 @@
 <script> 
     function diasemana() {
         var data = window.document.getElementById('datausuario');
-        var dia = data.getDay();
-    window.alert(`número do dia hoje é: ${dia}`);
+        var dataReal = new Date(data.value + 'T00:00:00'); // 1. Transforma o valor em data
+        var dia = dataReal.getDay();
+    window.alert(`número do dia escolhido é: ${dia}`);
     switch(dia) {
         case 0:
             window.alert('Ótimo Domingo');
