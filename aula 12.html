@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <p>DIA DA SEMANA</p>
+    <input type = Date id='datausuario'>
+    <button onclick="diasemana()">Saudação</button>
+<script> 
+    function diasemana() {
+        var data = window.document.getElementById('datausuario');
+        var dia = data.getDay();
+    window.alert(`número do dia hoje é: ${dia}`);
+    switch(dia) {
+        case 0:
+            window.alert('Ótimo Domingo');
+            break;
+        case 1:
+           window.alert('Ótima Segunda');
+            break; 
+         case 2:
+            window.alert('Ótima Terça');
+            break;
+        case 3:
+           window.alert('Ótima Quarta');
+            break; 
+        case 4:
+            window.alert('Ótima Quinta');
+            break;
+        case 5:
+           window.alert('Ótima Sexta');
+            break;
+        case 6:
+           window.alert('Ótimo Sábado');
+            break; 
+    }
+    }
+    
+
+
+
+</script>
+
+</body>
+</html>
